@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  
+  
+  #Defind root URL
+  root 'pages#index'
+  # Define routes for Pages
+
+  get '/home' => 'pages#home' #override default page routes
+
+  get '/profile' => 'pages#profile'
+
+  get 'explore' => 'pages#explore'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
