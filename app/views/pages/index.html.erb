@@ -1,2 +1,43 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<!-- If user is signed in render this -->
+
+<% if !user_signed_in? %>
+    <style>
+        body {
+            background: linear-gradient( /* gradient to darken background image */
+            rgba(0,0,0,0.7),
+            rgba(0,0,0,0.7)
+            ), url("/dog.jpg") no-repeat center center fixed; /* only display once, center location vertical and horizontal, will not scroll past image */
+            -webkit-background-size: cover; /* cover the whole page */
+            -moz-backgorund-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        h1 {
+            color:white;
+        }
+        
+        .container-index {
+            margin-right: 15%;
+            margin-left: 15%;
+        }
+        
+        .text {
+            color:white;
+        }
+        
+    </style>
+    <div class="container-index">
+        <h1>Welcome to Flutter</h1>
+        <p class="text">
+            This is a Twitter clone. Used as a test in development. Feel free to sign up and make a post.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium convallis diam <br>
+             et suscipit nunc mollis nec. Donec nec dui mattis, venenatis ante vitae, vehicula tortor. Praesent venenatis semper
+        </p>
+    </div>
+<!-- If user is not signed in render this -->
+<% else %>
+Not Signed in
+<%end %>
+
