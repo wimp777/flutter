@@ -26,15 +26,50 @@
             color:white;
         }
         
+        .footer-links {
+            text-align:center;
+            color:white;
+            margin-top:30%;
+            font-size:80%;
+            
+        }
+        
+        .log-in {
+            float:right;
+            width:300px;
+            height:150px;
+        }
+        
+        .sign-up {
+            float:right;
+            width:300px;
+            height:250px;
+        }
     </style>
-    <div class="container-index">
-        <h1>Welcome to Flutter</h1>
-        <p class="text">
-            This is a Twitter clone. Used as a test in development. Feel free to sign up and make a post.
-            <br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium convallis diam <br>
-             et suscipit nunc mollis nec. Donec nec dui mattis, venenatis ante vitae, vehicula tortor. Praesent venenatis semper
-        </p>
+    <div class="container-index row">
+        <div class="col-sm-6">
+            <h1>Welcome to Flutter</h1>
+            <p class="text">
+                This is a Twitter clone. Used as a test in development. Feel free to sign up and make a post.
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium convallis diam <br>
+                 et suscipit nunc mollis nec. Donec nec dui mattis, venenatis ante vitae, vehicula tortor.
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <div class="log-in panel">
+                Log in
+            </div>
+            
+            <div class="sign-up panel">
+                Sign Up
+            </div>
+        </div>
+        
+        <div class="col-sm-12">
+            <p class="footer-links">About  Help  Blog  Status  Jobs  Terms  Privacy  Cookies  Ads  Info  Brand  Advertise  Business Media Developers  Directory @ 2016 Flutter </p>
+        </div>
+        
     </div>
 <!-- If user is not signed in render this -->
 <% else %>
