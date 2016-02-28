@@ -1,13 +1,43 @@
 <div class="row">
     <div class="col-xs-3">
         <div class="panel panel-default">
-          <div class="panel-body">
-            <p>Stats</p>
-          </div>
+             <div class="panel-image hide-panel-body">
+                 <img src="/banner.jpg" class="panel-image-preview">
+             </div>
+             <div class="panel-footer">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <img src="/logo.png" height="50px" width="50px" class="rounded-img home-avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4 style="text-align: center;"><%= current_user.username %></h4>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 5px">
+                        <div class="col-sm-6" style="font-size: 80%; opacity: 0.7;">
+                          TWEETS<br>
+                          <h6 style="color: blue; font-size: 200%;">16</h6>
+                        </div>
+                        <div class="col-sm-6" style="font-size: 80%; opacity: 0.7;">
+                          FOLLOWERS<br>
+                          <h6 style="color: blue; font-size: 200%;">12</h6>
+                        </div>
+                    </div>
+                </div>
+             </div>
         </div>
         <div class="panel panel-default">
           <div class="panel-body">
-            <p>Trends</p>
+            <h5 style="color: grey; font-size: 125%;">Trends</h5>
+              <a href="">#Trend 1</a><br>
+                <span style="color: grey;">21k Posts</span><br><br>
+              <a href="">#Trend 2</a><br>
+                <span style="color: grey;">26k Posts</span><br><br>
+              <a href="">#Trend 3</a><br>
+                <span style="color: grey;">28k Posts</span><br><br>
+              <a href="">#Trend 4</a><br>
+                <span style="color: grey;">37k Posts</span><br><br>
+              <a href="">#Trend 5</a><br>
+                <span style="color: grey;">8k Posts</span><br><br>
           </div>
         </div>
     </div>
@@ -39,27 +69,26 @@
     </div>
       <% end %>
       
-    <div>
+   
       <div class="panel panel-default post-panel">
           <div class="panel-body row">
               <div class="col-sm-12">
                 <center>
                   <img src="/logo.png" height="25px" width="25px"></img>
-                  <a href="#top"><p class="opacity: .7;">Go to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></p></a>
+                  <a href="#top"><p class="opacity: .7;">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></p></a>
                 </center>
-              </div>
-          </div>
-    </div>
-      
-      
-    </div>
-    <div class="col-xs-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <p>About</p>
-          </div>
+            </div>
         </div>
     </div>
+  </div>
+      
+  <div class="col-xs-3">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p style="opacity: .5; font-size: 90%;">About  Help  Blog  Status  Jobs  Terms  Privacy  Cookies  Ads  Info  Brand  Advertise  Business Media Developers  Directory @ 2016 Echo4 Development</p>
+          </div>
+        </div>
+  </div>
 </div> <!-- End Row -->
 
 
