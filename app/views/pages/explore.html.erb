@@ -1,9 +1,86 @@
-<div class="col-xs-6">
-      <% for @p in @posts %>
+<div class="row">
+    <div class="col-xs-3">
+        <div class="panel panel-default">
+            <div class="panel-body">
+              <h5 style="color: grey; opacity: .7;">Explore</h5>
+                <p style="opacity: .5; font-size: 90%;">This page pulls users posts. As a way to find something new and follow that user's feed.</p>
+            </div>
+        </div>
+        
         <div class="panel panel-default">
           <div class="panel-body">
-            <p><%= @p.content %></p>
+            <h5 style="color: grey; font-size: 125%;">Trends</h5>
+              <a href="">#Trend 1</a><br>
+                <span style="color: grey;">21k Posts</span><br><br>
+              <a href="">#Trend 2</a><br>
+                <span style="color: grey;">26k Posts</span><br><br>
+              <a href="">#Trend 3</a><br>
+                <span style="color: grey;">28k Posts</span><br><br>
+              <a href="">#Trend 4</a><br>
+                <span style="color: grey;">37k Posts</span><br><br>
+              <a href="">#Trend 5</a><br>
+                <span style="color: grey;">8k Posts</span><br><br>
           </div>
         </div>
+    </div>
+    <div class="col-xs-6">
+      <%= render "/components/post_form" %><br><br>
+      
+      <% for @p in @posts %>
+      <div class="panel panel-default post-panel">
+          <div class="panel-body row">
+            
+              <div class="col-sm-1">
+                <img class="rounded-img" src="/logo.png" height="50px" width="50px">
+              </div>
+              <div class="col-sm-11">
+                <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> <span class="post-creation"> - <%= @p.created_at.to_formatted_s(:short) %></span></p>
+                <P class=" post-content"><%= @p.content %></P>
+              </div>
+              <div class="col-sm-12">
+                <p class="post-links">
+                  <span class="glyphicon glyphicon-share g-links" aria-hidden="true"></span>
+                  <span class="glyphicon glyphicon-retweet g-links" aria-hidden="true"></span>
+                  <span class="glyphicon glyphicon-thumbs-up g-links" aria-hidden="true"></span>
+                  <span class="glyphicon glyphicon-option-horizontal g-links" aria-hidden="true"></span>
+                  <a href="">View Conversation</a>
+                  
+                </p>
+              </div>
+          </div>
+    </div>
       <% end %>
-</div>
+      
+   
+      <div class="panel panel-default post-panel">
+          <div class="panel-body row">
+              <div class="col-sm-12">
+                <center>
+                  <img src="/logo.png" height="25px" width="25px"></img>
+                  <a href="#top"><p class="opacity: .7;">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></p></a>
+                </center>
+            </div>
+        </div>
+    </div>
+  </div>
+      
+    <div class="col-xs-3">
+      <div class="panel panel-default">
+          <div class="panel-body">
+            <h5 style="color: grey; opacity: .7;">Who to follow</h5>
+            <% for @u in @tofollow do %>
+              <p style="font-weight:bold; opacity: .85;"><a href="/user/<%= @u.username %>"><%= @u.username %></a></p>
+            <% end %>
+          </div>
+      </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p style="opacity: .5; font-size: 90%;">About  Help  Blog  Status  Jobs  Terms  Privacy  Cookies  Ads  Info  Brand  Advertise  Business Media Developers  Directory @ 2016 Echo4 Development</p>
+          </div>
+        </div>
+  </div>
+</div> <!-- End Row -->
+
+
+
+

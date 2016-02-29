@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   def home
     @posts = Post.all
     @newPost = Post.new
+     @tofollow = User.all.first(5)
   end
 
   def profile
@@ -24,5 +25,7 @@ class PagesController < ApplicationController
 
   def explore
     @posts = Post.all
+    @newPost = Post.new
+    @tofollow = User.all.first(5)
   end
 end

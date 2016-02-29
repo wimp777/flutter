@@ -84,6 +84,14 @@
   </div>
       
   <div class="col-xs-3">
+      <div class="panel panel-default">
+          <div class="panel-body">
+            <h5 style="color: grey; opacity: .7;">Who to follow</h5>
+            <% for @u in @tofollow do %>
+              <p style="font-weight:bold; opacity: .85;"><a href="/user/<%= @u.username %>"><%= @u.username %></a></p>
+            <% end %>
+          </div>
+      </div>
         <div class="panel panel-default">
           <div class="panel-body">
             <p style="opacity: .5; font-size: 90%;">About  Help  Blog  Status  Jobs  Terms  Privacy  Cookies  Ads  Info  Brand  Advertise  Business Media Developers  Directory @ 2016 Echo4 Development</p>
