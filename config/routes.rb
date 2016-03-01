@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   
   devise_for :users
+  resources :users do 
+    member do
+      get  :following, :followers
+    end
+  end
   
   #resources
   resources :posts
+  resources :relationships
   #Defind root URL
   root 'pages#index'
   # Define routes for Pages

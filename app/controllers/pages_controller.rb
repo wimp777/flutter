@@ -5,10 +5,11 @@ class PagesController < ApplicationController
   def home
     @posts = Post.all
     @newPost = Post.new
-     @tofollow = User.all.first(5)
+    @tofollow = User.all.first(5)
   end
 
   def profile
+    
     # grab the username from the url as :id
     if(User.find_by_username(params[:id]))
       @username = params[:id]
