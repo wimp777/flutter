@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.3.0"
 #Devise gem
 gem 'devise'
 #Bootstrap components
@@ -8,6 +8,10 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+# User pg for heroku database
+gem 'pg'
+# Heroku pre-reqs
+gem 'rails_12factor', group: :production # means will not be used locally on on heroku production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
